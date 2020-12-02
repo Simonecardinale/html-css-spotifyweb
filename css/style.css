@@ -15,6 +15,10 @@
 
 /* /stili generali */
 
+body {
+    background-color: #141922;
+}
+
 .container {
     height: 100vh;
     width: 100%;
@@ -101,7 +105,6 @@ nav {
 
 }
 
-
 .download-app-container hr {
     color: #666666;
     width: 90%;
@@ -115,7 +118,6 @@ nav {
     margin-right: 10px;
 }
 
-
 .account-id{
     font-weight: bold;
     margin: 10px 0;
@@ -125,10 +127,6 @@ nav {
     font-size: 26px;
     vertical-align: middle;
 }
-
-
-
-
 
 /* /nav bar laterale */
 /* barra superiore */
@@ -140,6 +138,22 @@ nav {
     position: fixed;
     top: 0;
     left: 250px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.higher-bar span {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.higher-bar span:hover {
+    transform: scale(1.1);
 }
 
 /* /barra superiore */
@@ -150,7 +164,91 @@ main {
     border: 2px solid blue;
     width:calc(100%-270px);
     height: 100%;
+    padding-top: 80px;
 }
+
+.music-style {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.music-style li {
+    margin-top: 10px;
+}
+
+.music-style li a {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #666666;
+    position: relative;
+}
+
+.music-style li a:before {
+    content: "";
+    background-color: yellow;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+}
+
+.music-style li a:hover:before, .music-style li a:hover {
+    opacity: 100%;
+    color: white;
+}
+
+main h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.music-played {
+    width: calc(100%/7);
+}
+
+.music-played>*{
+    padding: 5px 0;
+    text-align: center;
+}
+
+.played-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.played-container img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.music-played i {
+    opacity: ;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.music-played .layover {
+    position: relative;
+}
+
+.layover:hover img {
+    opacity: 50%;
+}
+
+.layover:hover i {
+    opacity: 100%;
+}
+
 
 /* /corpo principale */
 /* footer */
