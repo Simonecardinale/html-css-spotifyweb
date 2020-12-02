@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    color:white;
+    font-size: 12px;
 }
 
 /* stili generali */
@@ -24,11 +26,14 @@ a {
 
 nav {
     width: 250px;
-    height: 100%;
+    height: calc(100% - 80px);
     background-color: black;
     position: fixed;
     top: 0%;
     left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container-logo {
@@ -40,35 +45,69 @@ nav {
 }
 
 .container-logo a {
-    width: 80%;
+    width: 60%;
 }
 
-.navigation-menu {
+.navigation-menu, .playlist-item {
     list-style: none;
-    margin-top: 20px;
-    /* padding-left: 30px; */
+    margin-top: 10px;
 }
 
-.navigation-menu a {
+.navigation-menu a, .navigation-menu i, .playlist-item a, .playlist-item i, .download-app, .download-app i{
     color: #666666;
     font-weight: bold;
 }
 
-.navigation-menu i {
+.navigation-menu i, .playlist-item i, .download-app i, .account-id i {
     margin-right: 5px;
 }
 
-.navigation-menu li {
+.navigation-menu li, .playlist-item li, .playlist-container h4, .download-app, .account-id {
     padding: 5px 30px;
 }
 
-.navigation-menu li a:hover {
+.navigation-menu li:hover, .playlist-item li:hover, .download-app:hover {
+    border-left: 2px solid yellow;
+    cursor: pointer;
+}
+
+.navigation-menu li:hover a, .navigation-menu li:hover i, .playlist-item li:hover a, .download-app:hover, .download-app:hover i {
     color: white;
 }
 
-.navigation-menu li:hover {
-    border-left: 2px solid yellow;
+.playlist-container {
+    margin-top: 20px;
+    flex-grow: 2;
+    overflow-y: auto;
 }
+
+.playlist-item i {
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+.download-app-container {
+    min-height:10px;
+}
+
+.download-app-container hr {
+    color: #666666;
+    width: 90%;
+    margin: auto;
+}
+
+.account-id{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.account-id i {
+    font-size: 26px;
+    vertical-align: middle;
+}
+
+
+
 
 
 /* /nav bar laterale */
@@ -97,7 +136,7 @@ main {
 /* footer */
 
     footer {
-        height: 100px;
+        height: 80px;
         width: 100%;
         background-color: #282828;
         position: fixed;
