@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* stili generali */
+
+
+
+/* /stili generali */
+
+.container {
+    height: 100vh;
+    width: 100%;
+    border: 2px solid red;
+}
+
+/* nav bar laterale */
+
+nav {
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+/* /nav bar laterale */
+/* barra superiore */
+
+.higher-bar {
+    width: calc(100% - 250px);
+    height: 80px;
+    background-color: #080b12b7;
+    position: fixed;
+    top: 0;
+    left: 250px;
+}
+
+/* /barra superiore */
+/* corpo principale */
+
+main {
+    margin-left: 270px;
+    border: 2px solid blue;
+    width:calc(100%-270px);
+    height: 100%;
+}
+
+/* /corpo principale */
+/* footer */
+
+    footer {
+        height: 100px;
+        width: 100%;
+        background-color: #282828;
+        position: fixed;
+        bottom: 0%;
+    }
+
+/* /footer */
