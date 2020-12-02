@@ -9,6 +9,9 @@
 
 /* stili generali */
 
+.no-display {
+    display: none;
+}
 
 /* /stili generali */
 
@@ -59,25 +62,25 @@ nav {
     vertical-align: middle;
 }
 
-.navigation-menu a, .playlist-container a, .playlist-container i, .playlist-item a, .download-app, .download-app i{
+.navigation-menu span, .playlist-container a, .playlist-container i, .playlist-item a, .download-app span{
     color: #666666;
     font-weight: bold;
 }
 
-.navigation-menu i, .playlist-item i, .download-app i, .account-id i, .playlist-container i {
+.playlist-container i {
     margin-right: 5px;
 }
 
-.navigation-menu li, .playlist-item li, .playlist-container h4, .download-app, .account-id, .playlist-container p{
+.navigation-menu li, .playlist-item li, .playlist-container h4, .playlist-container p{
     padding: 5px 30px;
 }
 
-.navigation-menu li:hover, .playlist-item li:hover, .download-app:hover, .playlist-container p:hover {
+.navigation-menu li:hover, .playlist-item li:hover, .playlist-container p:hover, .download-app:hover {
     border-left: 2px solid yellow;
     cursor: pointer;
 }
 
-.navigation-menu li:hover a, .navigation-menu li:hover i, .playlist-item li:hover a, .download-app:hover, .download-app:hover i, .playlist-container p:hover a, .playlist-container p:hover i {
+.navigation-menu li:hover a, .navigation-menu li:hover i, .playlist-item li:hover a, .download-app-container span:hover .playlist-container p:hover a, .playlist-container p:hover i, .download-app:hover span {
     color: white;
 }
 
@@ -105,9 +108,17 @@ nav {
     margin: auto;
 }
 
+.download-app-container img {
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+
 .account-id{
     font-weight: bold;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 .account-id i {
@@ -158,4 +169,47 @@ main {
 
 
 
-@media screen and (max-width:)
+@media screen and (max-width:767px) {
+    .xs-no-display {
+        display: none;
+    }
+
+    .no-display {
+        display: block;
+    }
+
+    main {
+        margin-left: 70px;
+        border: 2px solid blue;
+        width:calc(100%-70px);
+        height: 100%;
+    }
+
+    .higher-bar {
+        width: calc(100% - 50px);
+        left: 50px;
+    }
+
+    nav {
+        width: 50px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .container-logo {
+        width: 100%;
+        height: 30px;
+        margin: 0;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+
+    .container-logo img {
+        width: 30px;
+    }
+
+    .navigation-menu {
+        flex-grow: 2;
+    }
+
+    }

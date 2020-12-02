@@ -14,14 +14,16 @@
         <!-- nav bar laterale -->
         <nav>
             <div class="container-logo">
-                <a href=""><img src="img/logo.svg" alt=""></a>
+                <a class="xs-no-display" href=""><img src="img/logo.svg" alt=""></a>
+                <a class="no-display" href=""><img src="img/logo-small.svg" alt=""></a>
             </div>
             <ul class="navigation-menu">
-                <li><a href=""><img src="img/home.svg" alt=""> Home</a></li>
-                <li><a href=""><img src="img/search.svg" alt=""> Cerca</a></li>
-                <li><a href=""><img src="img/libreria.svg" alt=""> La tua libreria</a></li>
+                <li><a href=""><img src="img/home.svg" alt=""> 
+                <span class="xs-no-display">Home</span></a></li>
+                <li><a href=""><img src="img/search.svg" alt=""><span class="xs-no-display">Cerca</span></a></li>
+                <li><a href=""><img src="img/libreria.svg" alt=""><span class="xs-no-display">La tua libreria</span></a></li>
             </ul>
-            <div class="playlist-container">
+            <div class="playlist-container xs-no-display">
                 <h4>PLAYLIST</h4>
                 <p><a href=""><i class="fas fa-plus-square"></i>Crea playlist</a></p>
                 <ul class="playlist-item">
@@ -36,9 +38,15 @@
                 </ul>
             </div>
             <div class="download-app-container">
-                <p class="download-app"><i class="fas fa-arrow-circle-down"></i>Installa app</p>
-                <hr>
-                <p class="account-id"><i class="fas fa-user-circle"></i>John Doe</p>
+                <div class="download-app">
+                    <img src="img/download.svg" alt="">
+                    <span class="xs-no-display">Installa app</span>
+                </div>
+                <hr class="xs-no-display">
+                <div class="account-id">
+                    <img src="img/profile.svg" alt="">
+                    <span class="xs-no-display">John Doe</span>
+                </div>
             </div>
         </nav>
         <!-- /nav bar laterale -->
