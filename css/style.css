@@ -13,6 +13,10 @@
     display: none;
 }
 
+p {
+    color: #7a7d81;
+}
+
 /* /stili generali */
 
 body {
@@ -33,7 +37,7 @@ a {
 
 nav {
     width: 250px;
-    min-height: 300px;
+    min-height: 500px;
     height: calc(100% - 80px);
     background-color: black;
     position: fixed;
@@ -141,6 +145,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 999;
 }
 
 .higher-bar span {
@@ -161,10 +166,12 @@ nav {
 
 main {
     margin-left: 270px;
+    margin-bottom: 80px;
     border: 2px solid blue;
     width:calc(100%-270px);
     height: 100%;
     padding-top: 80px;
+    overflow-y: auto;
 }
 
 .music-style {
@@ -202,33 +209,35 @@ main {
     color: white;
 }
 
-main h1 {
+main h1, main h2 {
     font-size: 16px;
     font-weight: bold;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
-.music-played {
+/* playlist recenti */
+
+.music-played, .personal-mix, .popular-artist {
     width: calc(100%/7);
 }
 
-.music-played>*{
+.music-played>*, .personal-mix>*, .popular-artist>*{
     padding: 5px 0;
     text-align: center;
 }
 
 .played-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.played-container img {
+.played-container img, .personal-mix img, .popular-artist img {
     width: 100%;
     margin-top: 10px;
 }
 
-.music-played i {
-    opacity: ;
+.music-played i, .personal-mix i, .popular-artist i {
     font-size: 50px;
     position: absolute;
     top: 50%;
@@ -237,7 +246,7 @@ main h1 {
     opacity: 0;
 }
 
-.music-played .layover {
+.layover {
     position: relative;
 }
 
@@ -249,7 +258,27 @@ main h1 {
     opacity: 100%;
 }
 
+/* /playlist recenti */
+/* playlist peronali */
 
+.personal-mix, .popular-artist {
+    padding-bottom: 10px;
+    margin: 0 10px;
+}
+
+.personal-mix-container, .popular-artist-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* /playlist personali */
+/* artisti popolari */
+
+.popular-artist img {
+    border-radius: 50%;
+}
+
+/* /artisti popolari */
 /* /corpo principale */
 /* footer */
 
@@ -268,6 +297,9 @@ main h1 {
 
 
 @media screen and (max-width:767px) {
+
+    /* display none */
+
     .xs-no-display {
         display: none;
     }
@@ -275,6 +307,8 @@ main h1 {
     .no-display {
         display: block;
     }
+
+    /* /display none */
 
     main {
         margin-left: 70px;
@@ -308,6 +342,15 @@ main h1 {
 
     .navigation-menu {
         flex-grow: 2;
+    }
+
+    .music-played, .personal-mix, .popular-artist {
+        width: calc(100%/3);
+        margin-right: 3px;
+    }
+
+    .personal-mix-container, .popular-artist-container {
+        justify-content: space-around;
     }
 
     }
