@@ -88,9 +88,13 @@ nav {
     overflow: hidden;
 }
 
-.playlist-item  { 
+.playlist-item{ 
     max-height: 70%;
     overflow-y: auto;
+}
+
+.playlist-item::-webkit-scrollbar-thumb {
+    background-color: grey;
 }
 
 .playlist-container  i {
@@ -154,7 +158,7 @@ main {
     margin-left: 270px;
     margin-bottom: 80px;
     width:calc(100%-270px);
-    height: 100%;
+    height: calc(100% - 80px);
     padding-top: 80px;
     overflow-y: auto;
 }
@@ -199,7 +203,7 @@ main h1, main h2 {
 
 .music-played, .personal-mix, .popular-artist {
     width: 150px;
-    margin-right: 15px;
+    margin-right: calc(150px / 6);
 }
 
 .music-played>*, .personal-mix>*, .popular-artist>*{
@@ -210,7 +214,6 @@ main h1, main h2 {
 .played-container {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
 }
 
 .played-container img, .personal-mix img, .popular-artist img {
@@ -479,4 +482,27 @@ nav {
     justify-content: space-around;
 }
 
+.device-container {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.device-container>* {
+    margin: 5px 0;
+}
+
+.music-bar::before, .music-bar::after {
+    display: none;
+}
+
+}
+
+@media screen and (max-height:349px) {
+    .higher-bar{
+        display: none;
+    }
+
+    main {
+        padding-top: 0;
+    }
 }
