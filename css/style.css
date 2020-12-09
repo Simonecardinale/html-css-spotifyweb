@@ -100,7 +100,6 @@ nav {
 .playlist-container  i {
     font-size: 40px;
     vertical-align: middle;
-
 }
 
 .download-app-container hr {
@@ -350,15 +349,11 @@ footer> * {
     opacity: 0;
 }
 
-
-
-
 .device-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-shrink: 0;
-
 }
 
 .volume-bar {
@@ -393,15 +388,14 @@ footer> * {
 }
 
 .music-bar-white:hover {
-        background-color: yellow;
-        cursor: pointer;
-    }
+    background-color: yellow;
+    cursor: pointer;
+}
 
-    .music-bar-white:hover .music-ball {
-        opacity: 100%;
-    }
+.music-bar-white:hover .music-ball {
+    opacity: 100%;
+}
 
-    
 .layover:hover i {
     opacity: 100%;
 }
