@@ -472,10 +472,6 @@ nav {
     margin-right: 15px;
 }
 
-/* .personal-mix-container, .popular-artist-container {
-    justify-content: space-around;
-} */
-
 .device-container {
     flex-direction: column;
     justify-content: center;
