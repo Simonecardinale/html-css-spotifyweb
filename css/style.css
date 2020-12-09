@@ -213,7 +213,6 @@ main h1, main h2 {
 .played-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .played-container img, .personal-mix img, .popular-artist img {
@@ -473,9 +472,9 @@ nav {
     margin-right: 15px;
 }
 
-.personal-mix-container, .popular-artist-container {
+/* .personal-mix-container, .popular-artist-container {
     justify-content: space-around;
-}
+} */
 
 .device-container {
     flex-direction: column;
